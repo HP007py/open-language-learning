@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#173f35"><meta name="description" content="Practicá idiomas en sesiones breves y conservá tu progreso en el dispositivo.">
+<title>Open Language Learning</title><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="assets/icon.svg"><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header><div class="logo">OL</div><div><h1>Open Language Learning</h1><p>Un paso corto, todos los días.</p></div></header>
+<main>
+<section class="intro"><div><small>TU ESPACIO DE PRÁCTICA</small><h2>Aprendé a tu ritmo.</h2><p>Ejercicios breves, explicaciones en español y progreso guardado localmente.</p></div><label>Nivel<select id="level"><option>A1</option><option>A2</option><option selected>B1</option></select></label></section>
+<section class="stats"><article><b id="reviewed">0</b><span>Respuestas revisadas</span></article><article><b id="correct">0</b><span>Respuestas correctas</span></article><article><b id="review">0</b><span>Temas para repasar</span></article></section>
+<section class="card"><div class="row"><div><small>RETO DE PRÁCTICA</small><h2 id="topic">Pasado simple</h2></div><span class="tag" id="levelTag">Nivel A2</span></div>
+<p id="instruction">Respondé en inglés. No hace falta escribir una frase larga.</p><div class="question" id="question">What did you do yesterday?</div><p class="translation" id="translation">¿Qué hiciste ayer?</p>
+<form id="answerForm"><label class="sr" for="answer">Tu respuesta en inglés</label><textarea id="answer" rows="3" placeholder="Write your answer in English…" required></textarea><div class="buttons"><button>Revisar respuesta</button><button type="button" class="secondary" id="listen">▶ Escuchar</button><button type="button" class="secondary" id="next">Otra pregunta</button></div></form>
+<div id="feedback" class="feedback" role="status" aria-live="polite" hidden></div><p class="fine">La corrección usa reglas sencillas y ejemplos limitados; no es una IA ni una evaluación completa.</p></section>
+<section class="card"><small>TU RECORRIDO</small><h2>Progreso acumulado</h2><div class="track"><div id="bar"></div></div><p id="summary">Todavía no hay suficientes respuestas para estimar tu progreso.</p><p class="fine">Una respuesta correcta no demuestra por sí sola que un tema esté dominado.</p></section>
+<section class="card"><h2>Tu privacidad</h2><p>Tus respuestas y estadísticas se guardan en este navegador. Esta app no tiene cuenta ni envía tu progreso a un servidor.</p><div class="buttons"><button type="button" class="secondary" id="export">Exportar respaldo</button><label class="file secondary" for="import">Importar respaldo</label><input id="import" type="file" accept="application/json" hidden><button type="button" class="danger" id="reset">Borrar progreso</button></div><p id="backupMessage" class="fine" role="status"></p></section>
+</main><footer>Open Language Learning · MVP 0.1<br>La voz depende del navegador y puede requerir conexión.</footer>
+<script src="app.js" defer></script></body></html>
